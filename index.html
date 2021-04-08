@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="create">
+        <h2 class="create-title">Create <br> New Task</h2>
+        <div class="inputs" id="title">
+            <h3 class="input-title" id="test">Title</h3>
+            <input type="text" id="taskTitle" placeholder="Title of task">
+        </div>
+        <div class="inputs" id="date-title">
+            <h3 class="input-title">Date & Time</h3>
+            <input type="date" id="date" placeholder="Date of task">
+            <input type="time" id="time" placeholder="Time of task">
+        </div>
+        <div class="inputs" id="duration-title">
+            <h3 class="input-title">Duration</h3>
+            <input type="text" id="duration" placeholder="Duration of task">
+        </div>
+        <div class="inputs" id="description-title">
+            <h3 class="input-title">Description</h3>
+            <textarea id="description" type="text" placeholder="Description of Task"></textarea>
+        </div>
+
+        <div id="buttons">
+            <button id="reset" type="button">Reset</button>
+            <button id="add" type="button">Add Task</button>
+        </div>
+    </div>
+
+    <div id="tasks">
+        <h1 id="tasks-title">Tasks:</h1>
+        <div id="task-divs">
+
+
+            
+        </div>
+        <div id="task-buttons">
+            <button id="delete-all" type="button">Delete all</button>
+            <button id="check-all" type="button">Check all</button>
+            <button id="download" type="button">Download</button>
+        </div>
+    </div>
+    
+    <div id="change-mode">
+        <div id="checkbox">Light Mode</div>
+        <div id="skew"></div>
+    </div>
+
+    <script src="helpers.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>

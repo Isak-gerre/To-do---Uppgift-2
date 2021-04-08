@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500&display=swap");
+:root {
+  --bgColor: #404040;
+  --cardColor: #333333;
+  --textarea: #464646;
+  --textColor: #ebebe7;
+  --textColor2: rgba(235, 235, 231, 0.8);
+  --titleColor: rgba(235, 235, 231, 0.54);
+  --borderColor: rgba(235, 235, 231, 0.1);
+
+  --Montserrat: "Montserrat", sans-serif;
+  --Poppins: "Poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--textColor);
+  font-family: var(--Montserrat);
+  cursor: normal;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bgColor);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+#create {
+  position: relative;
+  font-family: var(--Poppins);
+  letter-spacing: 2px;
+  height: 90vh;
+  min-height: 600px;
+  width: 40%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: var(--cardColor);
+  border: 1px solid #646464;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 30px;
+
+  input {
+    font-family: var(--Poppins);
+    color: var(--textColor);
+    padding: 5px 0px;
+    width: 90%;
+    max-width: 300px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--textColor);
+  }
+  textarea {
+    font-family: var(--Poppins);
+    color: var(--textColor);
+    max-width: 80%;
+    background: none;
+    border: none;
+    background: var(--textarea);
+    border-radius: 10px;
+    height: 120%;
+    padding: 10px;
+  }
+  .input-title {
+    color: var(--titleColor);
+  }
+  #buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 50px;
+    height: 60px;
+
+    #reset {
+      background: rgba(255, 160, 160, 0.35);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 86, 86, 0.219);
+      color: red;
+    }
+    #add {
+      background: var(--textarea);
+      border-radius: 10px;
+      border: 1px solid rgba(252, 252, 252, 0.219);
+    }
+
+    button {
+      width: 30%;
+      margin-left: 10%;
+      height: 35px;
+      font-family: var(--Montserrat);
+      font-style: normal;
+      font-weight: normal;
+    }
+  }
+}
+
+#tasks {
+  position: relative;
+  font-family: var(--Poppins);
+  letter-spacing: 2px;
+  height: 90vh;
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 30px;
+
+  #task-divs {
+    width: 100%;
+    margin-top: 20px;
+
+    .task {
+      display: flex;
+      position: relative;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      .info {
+        background: var(--cardColor);
+        border: 1px solid #646464;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 100%;
+        padding: 15px;
+
+        .task-title {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 36px;
+          letter-spacing: 2px;
+          color: rgba(235, 235, 231, 1);
+        }
+        .task-description-first-senteces {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 36px;
+          letter-spacing: 2px;
+          color: var(--textColor2);
+        }
+        .task-description {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 36px;
+          letter-spacing: 2px;
+          color: var(--textColor);
+          text-decoration: underline;
+          max-width: 35%;
+          cursor: pointer;
+        }
+      }
+      .time {
+        transform: rotate(-90deg) translateY(1.25em);
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: var(--textColor);
+        text-align: center;
+        max-height: 130px;
+      }
+      .smaller-date {
+        font-size: 8px;
+      }
+      .done {
+        text-decoration: line-through;
+      }
+    }
+    .task-duration {
+      position: absolute;
+      top: 20px;
+      right: 5%;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 36px;
+      letter-spacing: 2px;
+      color: var(--textColor);
+    }
+    .delete-task {
+      width: 20%;
+      position: absolute;
+      bottom: 20px;
+      right: 5%;
+    }
+    .regret-task {
+      width: 20%;
+      position: absolute;
+      bottom: 20px;
+      right: 30%;
+    }
+    .red {
+      background: rgba(255, 160, 160, 0.35);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 86, 86, 0.219);
+    }
+  }
+
+  #task-buttons {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    width: 27%;
+    height: 35px;
+    font-family: var(--Montserrat);
+    font-style: normal;
+    font-weight: normal;
+    background: var(--textarea);
+    border-radius: 10px;
+    border: 1px solid rgba(252, 252, 252, 0.219);
+  }
+}
+button {
+  cursor: pointer;
+}
+button:active {
+  box-shadow: inset 1px 0px 6px rgba(255, 255, 255, 0.3);
+}
+
+#change-mode {
+  position: absolute;
+  top: 50px;
+  right: 5%;
+  border: 1px solid var(--borderColor);
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  #skew {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 105%;
+    width: 60%;
+    background: var(--borderColor);
+    transform: skew(-45deg) translateX(-20px);
+    transition: all 0.2s ease-in-out;
+  }
+}
